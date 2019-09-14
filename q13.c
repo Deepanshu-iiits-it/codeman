@@ -5,16 +5,28 @@
 
 void main()
 {
-        int a,b,c;
+        int i,j,c=0;
+	char vector[20];
+	printf("\n enter the vector:");
+        scanf("%9s",&vector);
+	for(i=0;'\a'!=0;i++)
+	c++;
+	        
+	for(i=0;'\a'!=0;i++)
+	{if(vector[i]=='0')
+	for(j=i;j<c;j++)
+		{vector[j-1]=vector[j+2];
+		vector[j]=vector[j+3];
+		vector[j+1]=vector[j+4];
+		c=c-3;}
 
-        printf("\n enter the vector:");
-        scanf("%di%dj%dk",&a,&b,&c);
-        if(a==0&&b!=0)
-                printf("complex no.= %di",b);
-        else if(a!=0&&b==0)
-                printf("complex no.= %d",a);
-        else if(a==0&&b==0)
-                printf("complex no.=0");
-        else printf("complex no.= %d%+di",a,b);
+	if(vector[i]=='1')
+	for(j=i;j<c;j++)
+		{vector[j]=vector[j+1];
+		c=c-1;}
+	}
+	printf("\n the new vector is: ");
+	for(i=0;i<c;i++)
+	printf("%c",vector[i]);
 }
 
