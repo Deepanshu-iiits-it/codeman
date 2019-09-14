@@ -5,17 +5,16 @@
 
 void main()
 {
-        int i,j,k,n=1;
+        int i,j,k,c=0;
         for(i=1;i<=6;i++)
         {       j=i*(i+1)/2;
-		k=1;
-		while(k<=j)
-		{
-		int n=1+(n*(n+1)/2);
-		
-                printf("%d ",k);
-	        k+=n;
+		for(k=1;(k*(k+1)/2)<=j;k++)
+		{int t=k;
+		k=(k*(k+1)/2);
+	        printf("%d ",k);
+		k=t;
 		}
+		
                 printf("\n");
         }
 }
